@@ -1,24 +1,49 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| nickname | string | null: false |
+| email    | string | null: false |
+| password | string | null: false |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :scores
 
-* Configuration
+## scores テーブル
 
-* Database creation
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| point   | integer    | null: false                    |
+| user_id | references | null: false, foreign_key: true |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- has_many :score_words
+- has_many :words, through: :score_words
 
-* Services (job queues, cache servers, search engines, etc.)
+## words テーブル
 
-* Deployment instructions
+| Column      | Type   | Options                        |
+| ----------- | ------ | ------------------------------ |
+| name        | string | null: false, foreign_key: true |
+| description | text   | null: false, foreign_key: true |
 
-* ...
+### Association
+
+- has_many :score_words
+- has_many :scores, through: :score_words
+
+## score_words テーブル
+
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| score_id | references | null: false, foreign_key: true |
+| word_id  | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :score
+- belongs_to :word
