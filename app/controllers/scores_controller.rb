@@ -3,7 +3,7 @@ class ScoresController < ApplicationController
   end
 
   def new
-    @word = Word.all
+    gon.word = Word.find(1)
   end
 
 
