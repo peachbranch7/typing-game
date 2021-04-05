@@ -1,7 +1,9 @@
 class Word < ApplicationRecord
   belongs_to :user
 
-  validates :name, presence: true
-  validates :description, presence: true
-  validates :user_id, presence: true
+  with_options presence do
+    validates :name
+    validates :description
+    validates :user_id
+  end
 end
