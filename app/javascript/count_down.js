@@ -1,7 +1,6 @@
 function count() {
   var time = 60;
   var counter;
-  var min = document.getElementById("min");
   var sec = document.getElementById("sec");
   var start = document.getElementById("start");
   var stop = document.getElementById("stop");
@@ -30,7 +29,6 @@ function count() {
   function count() {
     if( time === 0 ) {
     sec.innerHTML = 0;
-    min.innerHTML = 0;
     toggle();
     alert("1分経過しました。");
     clearInterval( counter );
@@ -38,7 +36,6 @@ function count() {
     } else {
     time -= 1;
     sec.innerHTML = time % 60;
-    min.innerHTML = Math.floor( time / 60 );
     }
   }
 }
