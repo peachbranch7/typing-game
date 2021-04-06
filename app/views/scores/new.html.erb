@@ -1,8 +1,23 @@
 <%= render "shared/header"%>
 
 <body>
-  <div class="typing-title">下にタイピングする文字が出ます</div>
-  <div id="typing-words"></div>
+  <div class="typing-word-content">
+    <div class="typing-title">下にタイピングする文字が出ます</div>
+    <div id="typing-words"></div>
+  </div>
+  <div class="count-down-timer">
+    <p>
+      <span id="min">0</span> m
+      <span id="sec">0</span> s
+    </p>
+    <p>
+      <input type="button" id="start" value="START">
+      <input type="button" id="stop" value="STOP" disabled>
+    </p>
+  </div>
+
+  
+    
 </body>
 
 <%#= render "shared/footer"%>
