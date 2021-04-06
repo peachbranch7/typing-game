@@ -1,0 +1,16 @@
+#typing-words {
+  font-size: 4em;
+  font-weight: bold;
+  color: #666;
+  text-align: center;
+  margin-top: 60px;
+}
+
+span {
+  transition: all 300ms 0s ease;
+}
+
+.add-blue {
+  color: #00f;
+  font-size: 0.5em;
+}
