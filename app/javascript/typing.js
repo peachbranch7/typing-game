@@ -39,6 +39,8 @@ function questions(){
     }
 
   }
+
+  
 }
 
 window.addEventListener("load", questions);
