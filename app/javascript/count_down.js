@@ -21,25 +21,26 @@ function count() {
     if( start.disabled ) {
      start.disabled = false;
      stop.disabled = true;
-   } else {
+    } else {
      start.disabled = true
      stop.disabled = false;
-     }
-   }
+    }
+  }
 
-   function count() {
+  function count() {
     if( time === 0 ) {
     sec.innerHTML = 0;
     min.innerHTML = 0;
     toggle();
-    alert("3分経過しました。");
+    alert("1分経過しました。");
     clearInterval( counter );
+
     } else {
     time -= 1;
     sec.innerHTML = time % 60;
     min.innerHTML = Math.floor( time / 60 );
     }
-    }
+  }
 }
 
 
