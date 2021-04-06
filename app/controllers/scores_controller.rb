@@ -3,7 +3,12 @@ class ScoresController < ApplicationController
   end
 
   def new
-    gon.word = Word.find(1)
+    @words = Word.all
+    @name = []
+    @words.each do |word|
+      @name << word.name
+    end
+    gon.word = @name    
   end
 
 
