@@ -1,0 +1,2 @@
+class WordScore < ApplicationRecord
+end
