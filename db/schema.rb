@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_09_054909) do
+ActiveRecord::Schema.define(version: 2021_04_09_055542) do
 
   create_table "scores", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "point", null: false
@@ -33,6 +33,15 @@ ActiveRecord::Schema.define(version: 2021_04_09_054909) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "word_scores", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "word_id"
+    t.bigint "score_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["score_id"], name: "index_word_scores_on_score_id"
+    t.index ["word_id"], name: "index_word_scores_on_word_id"
+  end
+
   create_table "words", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "description", null: false
@@ -43,5 +52,7 @@ ActiveRecord::Schema.define(version: 2021_04_09_054909) do
   end
 
   add_foreign_key "scores", "users"
+  add_foreign_key "word_scores", "scores"
+  add_foreign_key "word_scores", "words"
   add_foreign_key "words", "users"
 end
