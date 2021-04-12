@@ -14,9 +14,19 @@
       <input type="button" id="stop" value="STOP" disabled>
     </p>
   </div>
+  <div>
+    ここまで<span id="count-number">0</span>問解けました。
+    <%= form_with model: @score, id:"form" do |s| %>
+      <%= s.text_field :user_id, value: current_user.id, type: "hidden" %>
+      <%= s.text_field :point, placeholder: "解けた問題数を入力してください。"%>
+      <%= s.submit "送信", id: "end_btn" %>
+    <% end %>
+  </div>
+
+
 
   
-    
+  <%= include_gon %>
 </body>
 
 <%#= render "shared/footer"%>
