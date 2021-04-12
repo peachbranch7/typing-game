@@ -1,5 +1,6 @@
 class ScoresController < ApplicationController
   def index
+    @score = Score.all
   end
 
   def new
