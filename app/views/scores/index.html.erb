@@ -1,3 +1,30 @@
-<%= render "shared/header" %>
-
-<%= link_to "ゲーム開始", new_score_path %>
+  <!-- ==================== ここからmain ==================== -->
+  <main>
+    <div class="container">
+      <div class="maintitle_wrapper">
+        <h2 class="maintitle">Typing Game</h2>
+      </div>
+      <div class="score_wrapper">
+        <h3 class="score_title">[ score ]</h3>
+        <ul class="score_list">
+          <% @score.each do |score| %>
+            <li class="score_item"><span class="score_date"><%= score.created_at %></span><%= score.point %>問</li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="newgame_wrapper">
+        <% if user_signed_in? %>
+          <div class="new_btn">
+            <%= link_to 'NEW GAME', new_score_path %>
+          </div>
+        <% else %>
+          <div class="game_start">
+            ※GAME STARTするにはログインしてください
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </main>
+  <script type="text/javascript" src=""></script>
+</body>
+</html>
