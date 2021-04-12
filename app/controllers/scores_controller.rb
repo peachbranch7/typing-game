@@ -3,18 +3,28 @@ class ScoresController < ApplicationController
   end
 
   def new
+    @score = Score.new
     @words = Word.all
-    @name = []
+    @word = []
     @words.each do |word|
-      @name << word.name
+      @word << {id: word.id, name: word.name}
+      # @word_id = Word.find(params[word_id: word.id])
     end
-    gon.word = @name    
+    gon.word = @word
+    @count = gon.count
   end
-
-
-
-
-
-
-
+  
+  def create
+    # @score = Score.new(score_params)
+    @score = Score.new(score_params)
+    @score.save
+      # Score.save
+    # gon.ids.each do |id|
+    # end
+  end
+  
+  private
+  def score_params
+    params.require(:score).permit(:point).merge(user_id: current_user.id)
+  end
 end
