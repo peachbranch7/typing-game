@@ -1,9 +1,24 @@
-#typing-words {
+body {
+  height: auto;
+}
+
+.typing-content {
+  width: 100%;
+}
+
+.typing-word-content {
+  height: 100px;
+  width: 100%;
+}
+
+
+
+.typing-word-content #typing-words {
   font-size: 4em;
   font-weight: bold;
   color: #666;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 200px;
 }
 
 span {
@@ -14,3 +29,68 @@ span {
   color: #00f;
   font-size: 0.5em;
 }
+
+.upper-count-down {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.lower-count-down {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 50px 0;
+}
+
+
+#start {
+  border: 2px solid orange;
+  padding: 20px 48px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+#stop {
+  border: 2px solid orange;
+  padding: 20px 48px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.sec-part {
+  font-size: 30px;
+}
+
+.correct-typing {
+  text-align: center;
+}
+
+.correct-number-js {
+  margin-bottom: 20px;
+}
+
+#correct-number {
+  border: 2px solid orange;
+  padding: 10px 28px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 10px;
+  width: 350px;
+}
+
+#end_btn {
+  border: 2px solid orange;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+
+
