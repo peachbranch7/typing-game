@@ -1,26 +1,34 @@
 <%= render "shared/header"%>
 
 <body>
-  <div class="typing-word-content">
-    <div class="typing-title">下にタイピングする文字が出ます</div>
-    <div id="typing-words"></div>
-  </div>
-  <div class="count-down-timer">
-    <p>
-      <span id="sec">0</span> 秒
-    </p>
-    <p>
-      <input type="button" id="start" value="START">
-      <input type="button" id="stop" value="STOP" disabled>
-    </p>
-  </div>
-  <div>
-    ここまで<span id="count-number">0</span>問解けました。
-    <%= form_with model: @score, id:"form" do |s| %>
-      <%= s.text_field :user_id, value: current_user.id, type: "hidden" %>
-      <%= s.text_field :point, placeholder: "解けた問題数を入力してください。"%>
-      <%= s.submit "送信", id: "end_btn" %>
-    <% end %>
+  <div class="typing-content">
+    <div class="typing-word-content">
+      <div id="typing-words">
+      </div>
+    </div>
+    <div class="count-down-timer">
+      <div class="upper-count-down">
+        <p class="sec-part">
+          <span id="sec">0</span > 秒
+        </p>
+      </div>
+      <div class="lower-count-down">
+        <p>
+          <input type="button" id="start" value="START">
+          <input type="button" id="stop" value="STOP" disabled>
+        </p>
+      </div>
+    </div>
+    <div class="correct-typing">
+      <div class="correct-number-js">
+        <span id="count-number">0</span><span>問解けました。</span>
+      </div>
+      <%= form_with model: @score, id:"form" do |s| %>
+        <%= s.text_field :user_id, value: current_user.id, type: "hidden" %>
+        <%= s.text_field :point, placeholder: "解けた問題数を入力してください", id:"correct-number" %>
+        <%= s.submit "送信", id: "end_btn" %>
+      <% end %>
+    </div>
   </div>
 
 
