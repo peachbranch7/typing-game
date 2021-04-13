@@ -30,7 +30,7 @@ function count() {
     if( time === 0 ) {
     sec.innerHTML = 0;
     toggle();
-    alert("1分経過しました。");
+    alert("1分経過しました。スコアを入力して送信してください。");
     clearInterval( counter );
 
     } else {
