@@ -21,11 +21,11 @@
     </div>
     <div class="correct-typing">
       <div class="correct-number-js">
-        <span id="count-number">0</span><span>問解けました。</span>
+        <span id="count-number">0</span><span>単語タイピングできました</span>
       </div>
       <%= form_with model: @score, id:"form" do |s| %>
         <%= s.text_field :user_id, value: current_user.id, type: "hidden" %>
-        <%= s.text_field :point, placeholder: "解けた問題数を入力してください", id:"correct-number" %>
+        <%= s.text_field :point, placeholder: "タイピングできた単語数を入力してください", id:"correct-number" %>
         <%= s.submit "送信", id: "end_btn" %>
       <% end %>
     </div>

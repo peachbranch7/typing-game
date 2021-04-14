@@ -16,12 +16,12 @@ class ScoresController < ApplicationController
   end
   
   def create
-    # @score = Score.new(score_params)
     @score = Score.new(score_params)
-    @score.save
-      # Score.save
-    # gon.ids.each do |id|
-    # end
+    if @score.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
   
   private
