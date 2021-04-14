@@ -1,0 +1,22 @@
+<main>
+  <div class="form_container">
+    <div class="form_title_wrapper">
+      <h2 class="form_title"> 新規単語登録</h2>
+    </div>
+    <%= form_with model: @word, local: true do |f| %>
+      <div class="form_wrapper">
+        <div class="word_name_wrapper">
+          <p class="word_name_title">単語名</p>
+          <%= f.text_field :name, class: "word_name_form" %>
+        </div>
+        <div class="word_description_wrapper">
+          <p class="word_description_title">単語の意味</p>
+          <%= f.text_field :description, rows: 10, class: "word_description_form" %>
+        </div>
+        <div class="word_btn_wrapper">
+          <%= f.submit "登録する", class: "word_btn_form" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  </main>
