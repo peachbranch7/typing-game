@@ -1,0 +1,109 @@
+/* ========================================
+    main
+========================================= */
+main .form_container {
+  max-width: 900px;
+  background-color: #F0EBEB;
+  margin: 0 auto;
+}
+
+main .form_container .form_title_wrapper {
+  height: 300px;
+}
+
+main .form_container .form_title_wrapper .form_title {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 300px;
+  letter-spacing: 3px;
+  font-size: 5.5rem;
+  font-weight: bold;
+  color: #74C2F8;
+}
+
+main .form_container .form_wrapper {
+  background-color: #FFF;
+  margin-bottom: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .form_container .form_wrapper .word_name_wrapper {
+  margin: 0px auto;
+  padding: 60px 0 30px;
+  width: 70%;
+}
+
+main .form_container .form_wrapper .word_name_wrapper .word_name_title {
+  width: 100%;
+}
+
+main .form_container .form_wrapper .word_name_wrapper .word_name_form {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  padding: 20px;
+  font-size: 2.1rem;
+  border: 1px solid #929292;
+  border-radius: 5px;
+  color: #929292;
+}
+
+main .form_container .form_wrapper .word_description_wrapper {
+  margin: 0px auto;
+  padding: 30px 0;
+  width: 70%;
+}
+
+main .form_container .form_wrapper .word_description_wrapper .word_description_title {
+  width: 100%;
+}
+
+main .form_container .form_wrapper .word_description_wrapper .word_description_form {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 150px;
+  padding: 20px;
+  font-size: 2.1rem;
+  border: 1px solid #929292;
+  border-radius: 5px;
+  vertical-align: text-top;
+  color: #929292;
+}
+
+main .form_container .form_wrapper .word_btn_wrapper {
+  margin: 0px auto;
+  padding: 30px 0 60px;
+  width: 260px;
+}
+
+main .form_container .form_wrapper .word_btn_wrapper .word_btn_form {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0;
+  text-align: center;
+  width: 150px;
+  color: #74C2F8;
+  border: 2px solid #74C2F8;
+  background-color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+main .form_container .form_wrapper .word_btn_wrapper .word_btn_form:hover {
+  color: #FFF;
+  background-color: #74C2F8;
+}
+/*# sourceMappingURL=words.css.map */
