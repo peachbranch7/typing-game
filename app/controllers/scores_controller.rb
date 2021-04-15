@@ -1,6 +1,6 @@
 class ScoresController < ApplicationController
   def index
-    @score = Score.all
+    @score = Score.all.order(id: "DESC")
   end
 
   def new
