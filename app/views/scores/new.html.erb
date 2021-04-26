@@ -25,14 +25,11 @@
       </div>
       <%= form_with model: @score, local: true, id:"form" do |s| %>
         <%= s.text_field :user_id, value: current_user.id, type: "hidden" %>
-        <%= s.text_field :point, placeholder: "タイピングできた単語数を入力してください", id:"correct-number" %>
+        <%= s.text_field :point, placeholder: "タイピングできた単語数を入力してください", id:"correct-number", type: "hidden" %>
         <%= s.submit "送信", id: "end_btn" %>
       <% end %>
     </div>
   </div>
-
-
-
   
   <%= include_gon %>
 </body>

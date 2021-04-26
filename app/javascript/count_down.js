@@ -1,9 +1,10 @@
 function count() {
-  var time = 5;
-  var counter;
-  var sec = document.getElementById("sec");
-  var start = document.getElementById("start");
-  var stop = document.getElementById("stop");
+  let time = 5;
+  let counter;
+  let sec = document.getElementById("sec");
+  let start = document.getElementById("start");
+  let stop = document.getElementById("stop");
+  document.getElementById("end_btn").style.display = "none";
   
 
   start.onclick = function() {
