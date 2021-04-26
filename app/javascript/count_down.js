@@ -1,5 +1,5 @@
 function count() {
-  var time = 60;
+  var time = 5;
   var counter;
   var sec = document.getElementById("sec");
   var start = document.getElementById("start");
@@ -30,12 +30,16 @@ function count() {
     if( time === 0 ) {
     sec.innerHTML = 0;
     toggle();
-    alert("終了です！ タイピングできた単語数を入力して送信してください。");
+    const numberCount = document.getElementById("count-number");
+    const numberText = numberCount.textContent;
+    alert(`お疲れ様でした!\n${numberText}問正解でした!`);
+    const correctNumber = document.getElementById("correct-number");
+    correctNumber.value = numberText;
+    document.getElementById("end_btn").click();
     clearInterval( counter );
-
     } else {
     time -= 1;
-    sec.innerHTML = time % 60;
+    sec.innerHTML = time % 5;
     }
   }
 }
